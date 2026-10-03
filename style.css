@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+font-family:Inter,sans-serif;
+background:#07060b;
+color:#fff;
+overflow-x:hidden
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+z-index:-2;
+background:
+radial-gradient(circle at 10% 10%,#7c3aed44,transparent 30%),
+radial-gradient(circle at 90% 40%,#ec489944,transparent 30%),
+radial-gradient(circle at 50% 100%,#2563eb22,transparent 35%)
+}
+
+body:after{
+content:"";
+position:fixed;
+inset:0;
+z-index:-1;
+opacity:.35;
+background-image:
+linear-gradient(#ffffff08 1px,transparent 1px),
+linear-gradient(90deg,#ffffff08 1px,transparent 1px);
+background-size:45px 45px;
+mask-image:linear-gradient(#000,transparent)
+}
+
+nav{
+height:70px;
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:99;
+padding:0 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#07060bcc;
+backdrop-filter:blur(18px);
+border-bottom:1px solid #ffffff0d
+}
+
+.logo{
+font:900 21px "Space Grotesk";
+letter-spacing:2px
+}
+
+.logo b{color:#d946ef}
+
+nav ul{
+display:flex;
+gap:28px;
+list-style:none
+}
+
+nav a{
+color:#aaa;
+text-decoration:none;
+font-size:12px;
+font-weight:700;
+transition:.3s
+}
+
+nav a:hover{color:#fff}
+
+.navbtn,.btn{
+background:linear-gradient(135deg,#7c3aed,#ec4899);
+color:white!important;
+border:0;
+padding:13px 19px;
+border-radius:12px;
+box-shadow:0 8px 30px #a855f733
+}
+
+.menu{
+display:none;
+font-size:25px
+}
+
+section{
+padding:100px 6%;
+max-width:1200px;
+margin:auto
+}
+
+.hero{
+min-height:100vh;
+padding-top:130px;
+display:grid;
+grid-template-columns:1.1fr .9fr;
+align-items:center;
+gap:50px
+}
+
+.badge{
+display:inline-block;
+padding:8px 13px;
+border:1px solid #d946ef44;
+background:#d946ef0d;
+border-radius:30px;
+color:#e879f9;
+font-size:10px;
+font-weight:800;
+margin-bottom:20px
+}
+
+h1{
+font:700 clamp(45px,7vw,78px)/.98 "Space Grotesk";
+letter-spacing:-4px
+}
+
+.grad{
+background:linear-gradient(90deg,#fff,#e879f9,#8b5cf6,#fff);
+background-size:300%;
+-webkit-background-clip:text;
+color:transparent;
+animation:grad 5s linear infinite
+}
+
+@keyframes grad{
+to{background-position:300%}
+}
+
+.desc{
+max-width:570px;
+color:#999;
+line-height:1.8;
+font-size:14px;
+margin:25px 0
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap
+}
+
+.btn{
+display:inline-block;
+text-decoration:none;
+font-size:12px;
+font-weight:800;
+transition:.3s
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 40px #a855f755
+}
+
+.outline{
+background:#ffffff06!important;
+border:1px solid #ffffff15;
+box-shadow:none!important
+}
+
+.stats{
+display:flex;
+gap:35px;
+margin-top:35px
+}
+
+.stats strong{font-size:20px}
+
+.stats small{
+display:block;
+color:#666;
+font-size:9px;
+margin-top:4px
+}
+
+.visual{
+height:450px;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative
+}
+
+.card{
+width:290px;
+height:350px;
+border:1px solid #ffffff18;
+border-radius:28px;
+background:#ffffff08;
+backdrop-filter:blur(20px);
+display:flex;
+align-items:center;
+justify-content:center;
+transform:rotate(6deg);
+animation:float 5s ease-in-out infinite;
+box-shadow:0 30px 80px #0009
+}
+
+@keyframes float{
+50%{transform:rotate(3deg) translateY(-18px)}
+}
+
+.icon{
+width:115px;
+height:115px;
+border-radius:32px;
+background:linear-gradient(135deg,#ec4899,#7c3aed);
+display:flex;
+align-items:center;
+justify-content:center;
+font:900 60px "Space Grotesk";
+box-shadow:0 0 60px #d946ef66;
+margin:auto
+}
+
+.fake{text-align:center}
+
+.fake h2{
+font:700 28px "Space Grotesk";
+letter-spacing:5px;
+margin-top:18px
+}
+
+.fake p{
+font-size:8px;
+color:#777;
+letter-spacing:4px;
+margin-top:5px
+}
+
+.tag{
+position:absolute;
+padding:11px 14px;
+background:#0e0c15dd;
+border:1px solid #ffffff14;
+border-radius:12px;
+font-size:10px;
+animation:tag 4s infinite ease-in-out
+}
+
+.t1{right:0;top:55px}
+
+.t2{
+left:0;
+bottom:55px;
+animation-delay:1s
+}
+
+@keyframes tag{
+50%{transform:translateY(-10px)}
+}
+
+.head{
+text-align:center;
+max-width:650px;
+margin:0 auto 45px
+}
+
+.label{
+color:#d946ef;
+font-size:10px;
+font-weight:800;
+letter-spacing:3px;
+margin-bottom:10px
+}
+
+.head h2{
+font:700 clamp(30px,5vw,48px) "Space Grotesk";
+letter-spacing:-2px
+}
+
+.head p{
+color:#777;
+font-size:13px;
+line-height:1.7;
+margin-top:12px
+}
+
+.grid3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px
+}
+
+.box{
+padding:28px;
+border:1px solid #ffffff0e;
+background:#ffffff04;
+border-radius:20px;
+transition:.4s
+}
+
+.box:hover{
+transform:translateY(-8px);
+border-color:#a855f755;
+background:#a855f70a
+}
+
+.ico{
+font-size:25px;
+margin-bottom:18px
+}
+
+.box h3{
+font-size:15px;
+margin-bottom:9px
+}
+
+.box p{
+font-size:11px;
+color:#777;
+line-height:1.7
+}
+
+/* =========================
+   PORTFOLIO ASLI
+========================= */
+
+.port{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px
+}
+
+.work{
+height:250px;
+border-radius:20px;
+border:1px solid #ffffff12;
+position:relative;
+overflow:hidden;
+background:#100d15;
+transition:.4s;
+cursor:pointer
+}
+
+.work img{
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+transition:.5s
+}
+
+.work:hover img{
+transform:scale(1.08)
+}
+
+.work:hover{
+border-color:#a855f755;
+box-shadow:0 20px 50px #0008
+}
+
+.work-info{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:35px 16px 16px;
+background:linear-gradient(transparent,#000e);
+z-index:2
+}
+
+.work-info b{
+display:block;
+font-size:13px
+}
+
+.work-info small{
+display:block;
+color:#aaa;
+font-size:9px;
+margin-top:4px
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.price{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+align-items:center
+}
+
+.pricebox{
+padding:28px;
+border:1px solid #ffffff12;
+border-radius:22px;
+background:#ffffff04
+}
+
+.pricebox.hot{
+border-color:#a855f7;
+background:#a855f714;
+transform:scale(1.04);
+box-shadow:0 20px 60px #a855f71c
+}
+
+.pricebox h3{
+color:#aaa;
+font-size:11px;
+letter-spacing:2px
+}
+
+.money{
+font:900 34px "Space Grotesk";
+margin:12px 0
+}
+
+.pricebox p{
+font-size:10px;
+color:#666
+}
+
+.pricebox ul{
+list-style:none;
+margin:22px 0
+}
+
+.pricebox li{
+font-size:11px;
+color:#aaa;
+margin:12px 0
+}
+
+.pricebox li:before{
+content:"✓";
+color:#d946ef;
+margin-right:8px;
+font-weight:900
+}
+
+/* =========================
+   STEPS
+========================= */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px
+}
+
+.step{text-align:center}
+
+.num{
+width:50px;
+height:50px;
+border:1px solid #a855f755;
+background:#a855f711;
+color:#d946ef;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto auto 15px;
+font-weight:900
+}
+
+.step h3{font-size:13px}
+
+.step p{
+font-size:10px;
+color:#666;
+line-height:1.6;
+margin-top:7px
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+text-align:center;
+border:1px solid #a855f733;
+background:radial-gradient(circle at center,#a855f71c,transparent 65%);
+border-radius:28px;
+padding:70px 25px
+}
+
+.cta h2{
+font:700 clamp(32px,5vw,50px) "Space Grotesk";
+letter-spacing:-2px
+}
+
+.cta p{
+color:#777;
+font-size:12px;
+max-width:500px;
+margin:15px auto 25px;
+line-height:1.7
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+border-top:1px solid #ffffff0d;
+padding:30px 6%;
+display:flex;
+justify-content:space-between;
+color:#555;
+font-size:10px
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+opacity:0;
+transform:translateY(35px);
+transition:1s
+}
+
+.show{
+opacity:1;
+transform:none
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+nav ul{
+display:none;
+position:absolute;
+top:70px;
+left:5%;
+right:5%;
+padding:20px;
+background:#0d0b12f5;
+border:1px solid #ffffff12;
+border-radius:16px;
+flex-direction:column;
+gap:18px
+}
+
+nav ul.open{display:flex}
+
+.navbtn{display:none}
+
+.menu{
+display:block;
+cursor:pointer
+}
+
+section{
+padding:80px 5%
+}
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+padding-top:120px
+}
+
+.desc{
+margin:22px auto
+}
+
+.buttons,.stats{
+justify-content:center
+}
+
+.visual{
+height:390px
+}
+
+.grid3,.port,.price{
+grid-template-columns:1fr
+}
+
+.steps{
+grid-template-columns:repeat(2,1fr)
+}
+
+.pricebox.hot{
+transform:none
+}
+
+.work{
+height:230px
+}
+
+footer{
+flex-direction:column;
+gap:8px;
+text-align:center
+}
+
+}
